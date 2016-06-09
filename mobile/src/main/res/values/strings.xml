@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">HomeControlApp</string>
+    <string name="app_name">Home Control Hub</string>
     <string name="hello_world">Hello World</string>
-    <string name="btnEnviar">ENVIAR</string>
+    <string name="btnTestaCon">TESTAR</string>
+    <string name="btnEnviar">Enviar</string>
+    <string name="txtEnvio">Texto</string>
+    <string name="sw1">Rele 1 - Luz Quarto</string>
+    <string name="sw2">Rele 2 - Luz Sala</string>
+    <string name="umidade">Umidade do ar</string>
+    <string name="temperatura">Temperatura do sensor</string>
+    <string name="title_activity_activity_menu_tabs">Home Hub</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>

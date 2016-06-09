@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ufscar.raphael.homecontrolapp.MenuPrincipal">
+    tools:context=".HomeControl.MenuPrincipal">
 
     <TextView
         android:id="@+id/txtHello"
@@ -21,10 +21,76 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btnEnviar"
-        android:id="@+id/btnEnviar"
-        android:layout_centerVertical="true"
+        android:text="@string/btnTestaCon"
+        android:id="@+id/btnTestaCon"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/txtHello"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/txtEnvio"
+        android:id="@+id/txtEnvio"
+        android:layout_below="@+id/btnTestaCon"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sw1"
+        android:id="@+id/switch1"
+        android:checked="false"
+        android:layout_marginTop="38dp"
+        android:layout_below="@+id/txtEnvio"
+        android:layout_centerHorizontal="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sw2"
+        android:id="@+id/switch2"
+        android:layout_below="@+id/switch1"
+        android:layout_alignStart="@+id/switch1"
+        android:layout_marginTop="38dp"
+        android:layout_alignEnd="@+id/switch1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/umidade"
+        android:id="@+id/txtUmidade"
+        android:layout_below="@+id/switch2"
+        android:layout_alignStart="@+id/switch2"
+        android:layout_marginTop="38dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/txtUmidadeValor"
+        android:layout_above="@+id/txtTemperatura"
+        android:layout_toEndOf="@+id/switch2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temperatura"
+        android:id="@+id/txtTemperatura"
+        android:layout_below="@+id/txtUmidade"
+        android:layout_alignStart="@+id/txtUmidade"
+        android:layout_marginTop="38dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/txtTemperaturaValor"
+        android:layout_alignTop="@+id/txtTemperatura"
+        android:layout_alignStart="@+id/txtUmidadeValor" />
 
 
 </RelativeLayout>
