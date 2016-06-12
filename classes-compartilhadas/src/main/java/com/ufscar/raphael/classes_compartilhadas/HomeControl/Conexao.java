@@ -1,11 +1,9 @@
-package com.ufscar.raphael.homecontrolapp.HomeControl;
+package com.ufscar.raphael.classes_compartilhadas.HomeControl;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
-
-import com.ufscar.raphael.homecontrolapp.HTTPRequestLibrary.HttpRequest;
 
 /**
  * Created by Raphael on 5/21/2016.

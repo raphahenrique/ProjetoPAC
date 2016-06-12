@@ -1,10 +1,16 @@
 package com.ufscar.raphael.homecontrolapp.HomeControl;
 
+import android.app.Notification;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationCompat.WearableExtender;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +19,8 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.ufscar.raphael.classes_compartilhadas.HomeControl.Conexao;
+import com.ufscar.raphael.classes_compartilhadas.HomeControl.TagsGlobais;
 import com.ufscar.raphael.homecontrolapp.R;
 
 import org.json.JSONException;
@@ -40,7 +48,6 @@ public class MenuPrincipal extends AppCompatActivity {
         setContentView(R.layout.activity_menu_principal);
 
         initialize();
-
 
 
         btnTeste.setOnClickListener(new ClickBtnTeste());
@@ -106,6 +113,42 @@ public class MenuPrincipal extends AppCompatActivity {
         mHandler = new Handler();
         startRepeatingTask();
 
+        txtEnvio.setVisibility(View.INVISIBLE);
+        btnTeste.setVisibility(View.GONE);
+    }
+
+
+    private void notificaWear(){
+
+        // Create an intent for the reply action
+        Intent actionIntent = new Intent(this, MenuPrincipal.class);
+        PendingIntent actionPendingIntent =
+                PendingIntent.getActivity(this, 0, actionIntent,
+                        PendingIntent.FLAG_UPDATE_CURRENT);
+
+        // Create the action
+        NotificationCompat.Action action =
+                new NotificationCompat.Action.Builder(R.drawable.ic_media_play,
+                        getString(R.string.notifica_liga), actionPendingIntent)
+                        .build();
+
+        // Build the notification and add the action via WearableExtender
+        Notification notification =
+                new NotificationCompat.Builder(this)
+                        .setSmallIcon(R.drawable.ic_media_pause)
+                        .setContentTitle("Teste Content Title")
+                        .setContentText("COntent Text")
+                        .extend(new WearableExtender().addAction(action))
+                        .build();
+
+        // Get an instance of the NotificationManager service
+        NotificationManagerCompat notificationManager =
+                NotificationManagerCompat.from(this);
+
+        int notificationId = 001;
+        // Issue the notification with notification manager.
+        notificationManager.notify(notificationId,notification);
+
     }
 
 
@@ -142,7 +185,7 @@ public class MenuPrincipal extends AppCompatActivity {
     //Atualizar dados a partir do servidor
     private void atualizar(){
         Log.e("ATUALIZAR","ATUALIZASAS");
-        //new AtualizarDados().execute(TagsGlobais.URL_SERVIDOR);
+        new AtualizarDados().execute(TagsGlobais.URL_SERVIDOR);
 
     }
 
@@ -165,7 +208,8 @@ public class MenuPrincipal extends AppCompatActivity {
             Log.d("HOME CONTROL", "ON POST EXECUTE-Enviar");
 
             //Tratar STRING RESPOSTA
-            txtEnvio.setText(resposta);
+            //txtEnvio.setText(resposta);
+
 
         }
     }
@@ -206,8 +250,9 @@ public class MenuPrincipal extends AppCompatActivity {
         protected void onPostExecute(Integer i) {
             Log.d("HOME CONTROL", "ON POST EXECUTE-");
 
-            //Tratar STRING RESPOSTA
-            txtEnvio.setText(resposta);
+            //STRING RESPOSTA
+            //txtEnvio.setText(resposta);
+
 
             //Atualiza UI
             if(valorRele1.equals("True"))
@@ -220,8 +265,8 @@ public class MenuPrincipal extends AppCompatActivity {
             else
                 sw2.setChecked(false);
 
-            txtUmidadeValor.setText(valorUmidade);
-            txtTemperaturaValor.setText(valorTemperatura);
+            txtUmidadeValor.setText(valorUmidade + " %");
+            txtTemperaturaValor.setText(valorTemperatura + " ºC");
 
         }
     }

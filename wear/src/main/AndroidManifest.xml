@@ -5,6 +5,8 @@
     <uses-feature android:name="android.hardware.type.watch" />
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -26,6 +28,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ReleLigaDesliga"
+            android:label="@string/title_activity_rele_liga_desliga"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+        <activity
+            android:name=".UmidadeTemperatura"
+            android:label="@string/title_activity_umidade_temperatura"
+            android:theme="@android:style/Theme.DeviceDefault.Light"></activity>
     </application>
 
 </manifest>

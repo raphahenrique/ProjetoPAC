@@ -1,4 +1,4 @@
-package com.ufscar.raphael.homecontrolapp.HTTPRequestLibrary;
+package com.ufscar.raphael.classes_compartilhadas.HomeControl;
 
 /*
  * Copyright (c) 2014 Kevin Sawicki <kevinsawicki@gmail.com>

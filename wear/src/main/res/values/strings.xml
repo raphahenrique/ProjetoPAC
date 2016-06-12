@@ -1,4 +1,10 @@
 <resources>
-    <string name="app_name">HomeControlApp</string>
+    <string name="app_name">Home Control Hub</string>
     <string name="hello_world">Hello World!</string>
+    <string name="rele">Quarto/Sala</string>
+    <string name="umidade_temperatura">Umidade/Temperatura</string>
+    <string name="title_activity_rele_liga_desliga">ReleLigaDesliga</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+    <string name="title_activity_umidade_temperatura">umidade_temperatura</string>
 </resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wearable.view.BoxInsetLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/container_umidade_temperatura"
+android:layout_height="match_parent"
+android:layout_width="match_parent"
+android:padding="15dp"
+tools:context=".UmidadeTemperatura"
+tools:deviceIds="wear">
+
+<RelativeLayout
+    android:id="@+id/relative_layout_menu_principal"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/umidade_temperatura"
+        android:id="@+id/txtUmidadeTemperatura"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Valor"
+        android:id="@+id/txtValorUmidadeTemperatura"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
+</android.support.wearable.view.BoxInsetLayout>

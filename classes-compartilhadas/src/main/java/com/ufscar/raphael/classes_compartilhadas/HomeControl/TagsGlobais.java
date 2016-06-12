@@ -1,4 +1,4 @@
-package com.ufscar.raphael.homecontrolapp.HomeControl;
+package com.ufscar.raphael.classes_compartilhadas.HomeControl;
 
 /**
  * Created by Raphael on 5/21/2016.

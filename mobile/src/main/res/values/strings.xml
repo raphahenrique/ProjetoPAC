@@ -4,6 +4,7 @@
     <string name="btnTestaCon">TESTAR</string>
     <string name="btnEnviar">Enviar</string>
     <string name="txtEnvio">Texto</string>
+    <string name="notifica_liga">Ligar luz</string>
     <string name="sw1">Rele 1 - Luz Quarto</string>
     <string name="sw2">Rele 2 - Luz Sala</string>
     <string name="umidade">Umidade do ar</string>

@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container_menu_principal"
+    android:id="@+id/container_rele_liga_desliga"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:padding="15dp"
-    tools:context="com.ufscar.raphael.homecontrolapp.MenuPrincipalWear"
+    tools:context="com.ufscar.raphael.homecontrolapp.ReleLigaDesliga"
     tools:deviceIds="wear">
 
     <RelativeLayout
@@ -15,23 +15,24 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent">
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:id="@+id/txtAppName"
-            android:layout_gravity="center_horizontal|top"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/rele"
+            android:id="@+id/txtNomeRele"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 
-        <android.support.wearable.view.WearableListView
-            android:id="@+id/wearable_list"
-            android:layout_height="139dp"
-            android:layout_width="match_parent"
-            android:layout_gravity="center_horizontal|top"
-            android:layout_below="@+id/txtAppName">
-        </android.support.wearable.view.WearableListView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgRele"
+            android:src="@drawable/lampada_ligada"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
 
     </RelativeLayout>
-
 </android.support.wearable.view.BoxInsetLayout>
