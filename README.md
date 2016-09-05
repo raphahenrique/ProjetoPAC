@@ -1,8 +1,6 @@
 # ProjetoPAC
-Projeto Academico em Computacao
+Projeto Academico em Computacao---Academic Project in Computing
 
-
-Academic Project in Computing
 
 Android project with mobile and wear components
 
